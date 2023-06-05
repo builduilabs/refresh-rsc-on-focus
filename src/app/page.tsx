@@ -5,13 +5,13 @@ export default function Home() {
   let date = new Date();
 
   return (
-    <div className="mt-6">
+    <div className="m-6">
       <h1 className="font-medium text-gray-900 text-lg tracking-tight">
         Refresh RSC on focus
       </h1>
       <div className="text-gray-900 max-w-prose mt-3">
         This page shows the datetime when this server component was rendered.
-        Try refocusing the window to trigger a server side rerender.
+        Try refocusing this browser window to trigger a server side rerender.
       </div>
 
       <div className="flex space-x-12 items-center mt-8">
