@@ -5,7 +5,7 @@ export default function Home() {
   let date = new Date();
 
   return (
-    <div className="m-3 md:m-6">
+    <div className="m-3 sm:m-6">
       <h1 className="font-medium text-gray-900 text-lg tracking-tight">
         Refresh RSC on focus
       </h1>
@@ -14,7 +14,7 @@ export default function Home() {
         Try refocusing this browser window to trigger a server side rerender.
       </div>
 
-      <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-12 md:items-center mt-6 md:mt-8">
+      <div className="flex flex-col space-y-4 sm:space-y-0 sm:flex-row sm:space-x-12 sm:items-center mt-6 sm:mt-8">
         <div>
           <div className="text-gray-500 text-sm">Date</div>
           <div className="text-3xl font-bold tracking-tighter text-gray-900">
