@@ -1,7 +1,11 @@
-import { format } from "date-fns";
+import { headers } from "next/headers";
+import { formatInTimeZone } from "date-fns-tz";
 import { RefreshOnFocus } from "./refresh-on-focus";
 
 export default function Home() {
+  const headersList = headers();
+
+  let tz = headersList.get("x-vercel-ip-timezone") ?? "UTC";
   let date = new Date();
 
   return (
@@ -18,21 +22,21 @@ export default function Home() {
         <div>
           <div className="text-gray-500 text-sm">Date</div>
           <div className="text-3xl font-bold tracking-tighter text-gray-900">
-            {format(date, "MMMM do, yyyy")}
+            {formatInTimeZone(date, tz, "MMMM do, yyyy")}
           </div>
         </div>
 
         <div>
           <div className="text-gray-500 text-sm">Time</div>
           <div className="text-3xl font-bold tracking-tighter text-gray-900">
-            {format(date, "h:mm:ss a")}
+            {formatInTimeZone(date, tz, "h:mm:ss a")}
           </div>
         </div>
 
         <div>
           <div className="text-gray-500 text-sm">Timezone</div>
           <div className="text-3xl font-bold tracking-tighter text-gray-900">
-            {format(date, "zzzz")}
+            {formatInTimeZone(date, tz, "zzz")}
           </div>
         </div>
       </div>

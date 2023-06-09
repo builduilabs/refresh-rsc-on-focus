@@ -6,6 +6,7 @@ specifiers:
   '@types/react-dom': 18.2.4
   autoprefixer: 10.4.14
   date-fns: ^2.30.0
+  date-fns-tz: ^2.0.0
   eslint: 8.42.0
   eslint-config-next: 13.4.4
   next: 13.4.4
@@ -23,6 +24,7 @@ dependencies:
   '@types/react-dom': 18.2.4
   autoprefixer: 10.4.14_postcss@8.4.24
   date-fns: 2.30.0
+  date-fns-tz: 2.0.0_date-fns@2.30.0
   eslint: 8.42.0
   eslint-config-next: 13.4.4_tizxnkcvjrb4cldxgwq5h3lj5u
   next: 13.4.4_biqbaboplfbrettd7655fr4n2y
@@ -666,6 +668,14 @@ packages:
 
   /damerau-levenshtein/1.0.8:
     resolution: {integrity: sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==}
+    dev: false
+
+  /date-fns-tz/2.0.0_date-fns@2.30.0:
+    resolution: {integrity: sha512-OAtcLdB9vxSXTWHdT8b398ARImVwQMyjfYGkKD2zaGpHseG2UPHbHjXELReErZFxWdSLph3c2zOaaTyHfOhERQ==}
+    peerDependencies:
+      date-fns: '>=2.0.0'
+    dependencies:
+      date-fns: 2.30.0
     dev: false
 
   /date-fns/2.30.0:
