@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes text {
+  0% {
+    color: theme(colors.sky.500);
+  }
+  50% {
+    color: theme(colors.sky.500);
+  }
+  100% {
+    color: theme(colors.gray.900);
+  }
+}
