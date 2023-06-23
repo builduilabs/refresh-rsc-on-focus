@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes fade-in {
+  0% {
+    /* color: theme(colors.sky.500); */
+    /* background: "linear-gradient(to right, rgb(255 255 255 / 0), rgb(255 255 255 / 0))"; */
+    /* background-image: "linear-gradient(to right, rgba(0,0,0,.5), rgba(0,0,0,.5))"; */
+    background-size: 100% 0.1em, 0 0.1em;
+    /* background-image: green; */
+    /* background: black; */
+    /* background: transparent; */
+  }
+  /* 50% {
+    color: theme(colors.sky.500);
+  } */
+  50% {
+    /* color: theme(colors.gray.900); */
+    /* background: "linear-gradient(to right, rgb(255 255 255 / 1), rgb(255 255 255 / 1))"; */
+    /* background: "linear-gradient(to right, rgb(255 255 255 / 0), rgb(255 255 255 / 0))"; */
+    /* background: "linear-gradient(to right, black, black)"; */
+    /* background: black; */
+    background-size: 0 0.1em, 100% 0.1em;
+    /* background-image: "linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0))"; */
+    /* background: black; */
+  }
+  100% {
+    /* color: theme(colors.sky.500); */
+    /* background: "linear-gradient(to right, rgb(255 255 255 / 0), rgb(255 255 255 / 0))"; */
+    /* background-image: "linear-gradient(to right, rgba(0,0,0,.5), rgba(0,0,0,.5))"; */
+    background-size: -100% 0.1em, 0 0.1em;
+    /* background-image: green; */
+    /* background: black; */
+    /* background: transparent; */
+  }
+}
