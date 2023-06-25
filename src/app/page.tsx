@@ -2,11 +2,6 @@ import { headers } from "next/headers";
 import { formatInTimeZone } from "date-fns-tz";
 import { RefreshOnFocus } from "./refresh-on-focus";
 
-const stats = [
-  { name: "Total Subscribers", stat: "71,897" },
-  { name: "Avg. Open Rate", stat: "58.16%" },
-  { name: "Avg. Click Rate", stat: "24.57%" },
-];
 export default function Home() {
   const headersList = headers();
 
@@ -20,29 +15,23 @@ export default function Home() {
   ];
 
   return (
-    <div
-      className="max-w-prose mx-auto w-full min-h-full flex flex-col justify-center"
-      key={date.toString()}
-    >
-      <h1 className="font-bold text-4xl tracking-tight">
-        Refresh RSC On Focus
-      </h1>
-      <div className="mt-4 text-xl text-gray-600">
-        This page shows the datetime when this Server Component was rendered.
-        Try refocusing this browser window to trigger a server-side rerender.
+    <div className="max-w-4xl mx-auto w-full min-h-full flex flex-col justify-center px-4 md:px-8 pb-4 md:pb-20">
+      <div className="mt-4 md:text-lg text-gray-300 space-y-2 text-sm sm:text-base">
+        <p>Shows the date and time when this Server Component was rendered.</p>
+        <p>Refocus this browser window to trigger a server-side rerender.</p>
       </div>
 
-      <div className="mt-8">
+      <div className="mt-2 md:mt-8">
         <dl className="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-3">
-          {stats.map((stat, i) => (
+          {stats.map((stat) => (
             <div
-              key={stat.label}
-              className="overflow-hidden rounded-lg bg-white px-4 py-5 shadow border-l-4 border-transparent"
+              key={stat.value}
+              className="overflow-hidden rounded-lg bg-gray-900/70 border border-white border-opacity-[15%] p-3 md:px-4 md:py-5 shadow animate-[text_1000ms] text-sky-500"
             >
-              <dt className="truncate text-xs font-medium text-gray-500">
+              <dt className="truncate text-sm font-medium text-white/50">
                 {stat.label}
               </dt>
-              <dd className="relative mt-1 text-xl font-semibold tracking-tight overflow-hidden animate-[text_1000ms_ease-in-out]">
+              <dd className="relative md:mt-2 text-lg md:text-xl tabular-nums font-semibold md:tracking-tight origin-center truncate">
                 {stat.value}
               </dd>
             </div>

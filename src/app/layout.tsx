@@ -1,6 +1,11 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 
+const inter = Inter({
+  subsets: ["latin"],
+  display: "block",
+});
+
 export const metadata = {
   title: "Refresh RSC on focus",
   description:
@@ -13,8 +18,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="h-full bg-gray-200 text-gray-900">
-      <body className="antialiased font-sans h-full">{children}</body>
+    <html lang="en" className="h-full text-gray-900">
+      <body className={`${inter.className} antialiased font-sans h-full`}>
+        {children}
+      </body>
     </html>
   );
 }
