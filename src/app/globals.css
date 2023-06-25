@@ -4,12 +4,15 @@
 
 @keyframes text {
   0% {
-    color: theme(colors.sky.500);
+    background-color: theme(colors.sky.500 / 75%);
+    color: white;
   }
-  50% {
-    color: theme(colors.sky.500);
+  30% {
+    background-color: theme(colors.sky.500 / 75%);
+    color: white;
   }
   100% {
-    color: theme(colors.gray.900);
+    background-color: theme(colors.gray.900 / 70%);
+    color: theme(colors.sky.500);
   }
 }
